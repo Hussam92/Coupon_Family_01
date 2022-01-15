@@ -306,6 +306,26 @@ class PermissionsTableSeeder extends Seeder
                 'id'    => 74,
                 'title' => 'purchase_access',
             ],
+            [
+                'id'    => 75,
+                'title' => 'subscription_create',
+            ],
+            [
+                'id'    => 76,
+                'title' => 'subscription_edit',
+            ],
+            [
+                'id'    => 77,
+                'title' => 'subscription_show',
+            ],
+            [
+                'id'    => 78,
+                'title' => 'subscription_delete',
+            ],
+            [
+                'id'    => 79,
+                'title' => 'subscription_access',
+            ],
         ];
 
         Permission::insert($permissions);

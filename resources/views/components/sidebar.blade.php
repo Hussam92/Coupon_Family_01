@@ -99,7 +99,7 @@
                 @endcan
                 @can('customer_management_access')
                     <li class="items-center">
-                        <a class="has-sub {{ request()->is("admin/coupons*")||request()->is("admin/offers*")||request()->is("admin/templates*")||request()->is("admin/newsletters*")||request()->is("admin/promotions*") ? "sidebar-nav-active" : "sidebar-nav" }}" href="#" onclick="window.openSubNav(this)">
+                        <a class="has-sub {{ request()->is("admin/coupons*")||request()->is("admin/offers*")||request()->is("admin/templates*")||request()->is("admin/newsletters*")||request()->is("admin/promotions*")||request()->is("admin/subscriptions*") ? "sidebar-nav-active" : "sidebar-nav" }}" href="#" onclick="window.openSubNav(this)">
                             <i class="fa-fw fas c-sidebar-nav-icon fa-hand-holding-usd">
                             </i>
                             {{ trans('cruds.customerManagement.title') }}
@@ -147,6 +147,15 @@
                                         <i class="fa-fw c-sidebar-nav-icon fas fa-gift">
                                         </i>
                                         {{ trans('cruds.promotion.title') }}
+                                    </a>
+                                </li>
+                            @endcan
+                            @can('subscription_access')
+                                <li class="items-center">
+                                    <a class="{{ request()->is("admin/subscriptions*") ? "sidebar-nav-active" : "sidebar-nav" }}" href="{{ route("admin.subscriptions.index") }}">
+                                        <i class="fa-fw c-sidebar-nav-icon far fa-bell">
+                                        </i>
+                                        {{ trans('cruds.subscription.title') }}
                                     </a>
                                 </li>
                             @endcan

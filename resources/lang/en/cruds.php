@@ -353,4 +353,22 @@ return [
             'deactivated_at_helper' => ' ',
         ],
     ],
+    'subscription' => [
+        'title'          => 'Subscriptions',
+        'title_singular' => 'Subscription',
+        'fields'         => [
+            'id'                => 'ID',
+            'id_helper'         => ' ',
+            'user'              => 'User',
+            'user_helper'       => ' ',
+            'team'              => 'Team',
+            'team_helper'       => ' ',
+            'created_at'        => 'Created at',
+            'created_at_helper' => ' ',
+            'updated_at'        => 'Updated at',
+            'updated_at_helper' => ' ',
+            'deleted_at'        => 'Deleted at',
+            'deleted_at_helper' => ' ',
+        ],
+    ],
 ];
